@@ -10,6 +10,7 @@ A Python tool to check data quality against predefined standards.
 
 ```sh
 pip install .
+```
 
 ## Usage
 
@@ -17,5 +18,6 @@ pip install .
 quality_check <standard_df_path> <data_folder_path>
 ```
 
-`<standard_df_path>`: Path to the data standards CSV file.
-`<data_folder_path>`: Path to the folder containing data files to check.
+<standard_df_path>: Path to the data standards CSV file.
+
+<data_folder_path>: Path to the folder containing data files to check.
