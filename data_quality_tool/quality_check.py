@@ -134,7 +134,6 @@ def check_and_export(standard_df_path, data_folder_path, log_file_path):
                             values=values, value_standards=value_standards)
 
     # Save log to a CSV file
-
     log_df.to_csv(log_file_path, index=False)
 
     print(f"Log file generated: {log_file_path}")

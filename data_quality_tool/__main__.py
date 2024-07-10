@@ -1,6 +1,6 @@
 import os
 import sys
-from tool.quality_check import get_current_date_indicator, check_and_export
+from data_quality_tool.quality_check import get_current_date_indicator, check_and_export
 
 def main():
     if len(sys.argv) != 3:

@@ -14,6 +14,10 @@ pip install .
 
 ## Usage
 
+1. Put your data standards csv file and data folder with new data under the project dir
+2. Run the tool
+3. The analysis log will be automatically generated under the new data folder
+
 ```sh
 quality_check <standard_df_path> <data_folder_path>
 ```
