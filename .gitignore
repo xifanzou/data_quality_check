@@ -1,0 +1,14 @@
+# Ignore everything
+*
+
+# Except these files and directories
+!.gitignore
+!data_quality_tool/
+!LICENSE
+!README.md
+!requirements.txt
+!pyproject.toml
+!notebook.ipynb
+
+# Optional: Ignore any specific files within data_quality_tool if needed
+# data_quality_tool/some

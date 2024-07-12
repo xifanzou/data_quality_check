@@ -4,6 +4,18 @@ A Python tool to check data quality against predefined standards.
 
 ## Installation
 
+To install this package, ensure you have `pip` version 24:
+
+```bash
+# Upgrade pip to version 24
+pip install --upgrade pip==24
+```
+
+# Then install the package
+```
+pip install toc_quality_check
+```
+
 1. Clone the repository.
 2. Navigate to the project directory.
 3. Install the package:

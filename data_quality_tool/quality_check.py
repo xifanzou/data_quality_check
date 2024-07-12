@@ -32,6 +32,8 @@ def check_and_export(standard_df_path, data_folder_path, log_file_path):
 
     # Define folder path and Load new data
     all_files = [os.path.join(data_folder_path, f) for f in os.listdir(data_folder_path) if f.endswith('.csv')]
+    print(all_files)
+    
     new_data_df = pd.concat((pd.read_csv(f) for f in all_files), ignore_index=True)
     new_data_df.columns = new_data_df.columns.str.strip()
 
@@ -85,9 +87,9 @@ def check_and_export(standard_df_path, data_folder_path, log_file_path):
                         VALUE_WRONG = 'YES'
                 
                 # Process int columns
-                elif column_type == 'int64':
+                elif column_type != 'object':
                     sample_values = standard_df.loc[standard_df['Variable Name'] == column, 'Sample Values'].values[0].split(',')
-                    sample_values = [int(v) for v in sample_values]  # Convert sample values to int
+                    # sample_values = [int(v) for v in sample_values]  # Convert sample values to int
                     VALUE_WRONG_flag = False
                     for value in new_data_df[column].dropna().unique():
                         if value not in sample_values:
@@ -97,21 +99,6 @@ def check_and_export(standard_df_path, data_folder_path, log_file_path):
                         VALUE_WRONG = 'YES'
                         values = ', '.join(map(str, new_data_df[column].dropna().unique()))
                         value_standards = ', '.join(map(str, sample_values))
-                            
-                # Process float columns
-                elif column_type == 'float64':
-                    sample_values = standard_df.loc[standard_df['Variable Name'] == column, 'Sample Values'].values[0].split(',')
-                    sample_values = [float(v) for v in sample_values]  # Convert sample values to float
-                    VALUE_WRONG_flag = False
-                    for value in new_data_df[column].dropna().unique():
-                        if value not in sample_values:
-                            VALUE_WRONG_flag = True
-                            break
-                    if VALUE_WRONG_flag:
-                        VALUE_WRONG = 'YES'
-                        values = ', '.join(map(str, new_data_df[column].dropna().unique()))
-                        value_standards = ', '.join(map(str, sample_values))
-
 
                 # Process object columns
                 elif column_type == 'object':
