@@ -30,14 +30,14 @@ pip install data-standards-check
 
 ## Usage
 
-1. Put your all the data in one folder
+1. Put all the data in one folder, make sure the standard file is named as `data_standards.csv` if it's predefined
 2. Run the tool in sh
 3. The analysis log will be automatically generated under the new data folder
 
 ```sh
 # Check data quality and export log
-data_check --check <data_folder_path>
+data_check check <data_folder_path>
 
 # Generate data value standard file
-data_check --generate <data_folder> [--input_file <input_file>]
+data_check generate <data_folder> [--input_file <input_file>]
 ```
