@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "data-standards-check"
-version = "0.2(test)"
+version = "0.2"
 description = "A tool to check data quality against predefined standards and generated data standards if needed."
 readme = { file = "README.md", content-type = "text/markdown" }
 license = {file = "LICENSE"}
