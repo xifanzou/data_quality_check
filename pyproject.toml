@@ -3,9 +3,9 @@ requires = ["setuptools>=42", "wheel", "pip==24"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "wwl_toc_data_quality_tool"
-version = "0.1.1"
-description = "A tool to check data quality against predefined standards."
+name = "data-standards-check"
+version = "0.2(test)"
+description = "A tool to check data quality against predefined standards and generated data standards if needed."
 readme = { file = "README.md", content-type = "text/markdown" }
 license = {file = "LICENSE"}
 requires-python = ">=3.6"
@@ -21,7 +21,7 @@ classifiers = [
 ]
 
 [project.urls]
-Homepage = "https://github.com/xifanzou/data_quality_check"
+Homepage = "https://github.com/xifanzou/data_standards_check"
 
 [project.scripts]
-quality_check = "data_quality_tool.__main__:main"
+data_check = "data_quality_tool.__main__:main"
