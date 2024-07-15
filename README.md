@@ -22,15 +22,16 @@ To install this package, ensure you have `pip` version 24:
 pip install --upgrade pip==24
 ```
 
-# Then install the package
+Then install the package:
+
 ```
 pip install data-standards-check
 ```
 
 ## Usage
 
-1. Put your data standards csv file and data folder with new data under the project dir
-2. Run the tool
+1. Put your all the data in one folder
+2. Run the tool in sh
 3. The analysis log will be automatically generated under the new data folder
 
 ```sh
@@ -38,5 +39,5 @@ pip install data-standards-check
 data_check --check <data_folder_path>
 
 # Generate data value standard file
-data_check --generate <data_folder> /[--input_file <input_file>]
+data_check --generate <data_folder> [--input_file <input_file>]
 ```
